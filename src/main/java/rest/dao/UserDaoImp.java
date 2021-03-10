@@ -67,13 +67,6 @@ public class UserDaoImp implements UserDao {
     }
 
     @Override
-    public boolean userExist(String email) {
-        return getAll()
-                .stream()
-                .anyMatch((e) -> e.getEmail().hashCode() == email.hashCode());
-    }
-
-    @Override
     public List<Role> getAllRoles() {
         TypedQuery<Role> roles = entityManager.createQuery("SELECT r FROM Role r", Role.class);
         return roles.getResultList();

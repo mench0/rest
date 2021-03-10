@@ -17,5 +17,4 @@ public interface UserDao {
     List<User> getAll();
     Role getRole(String name);
     List<Role> getAllRoles();
-    boolean userExist(String email);
 }
